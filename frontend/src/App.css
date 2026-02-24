@@ -1,0 +1,35 @@
+/* Markdown output styling */
+.result-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.result-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+}
+.result-content th,
+.result-content td {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  text-align: left;
+}
+.result-content th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+.result-content p {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+.result-content ul,
+.result-content ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+.result-content li {
+  margin: 0.25rem 0;
+}
