@@ -41,18 +41,25 @@ export default function ResultDisplay({ result }) {
   }
 
   return (
-    <div className="mt-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 bg-gray-50 rounded-t-lg">
-        <span className="text-sm font-medium text-gray-700">生成結果</span>
+    <div className="mt-6 bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
+      <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-blue-50/30">
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+          <span className="text-sm font-semibold text-gray-700">生成結果</span>
+        </div>
         <button
           onClick={handleCopy}
-          className="px-3 py-1.5 text-xs font-medium bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
+          className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
+            copied
+              ? 'bg-emerald-100 text-emerald-700 border border-emerald-200'
+              : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
+          }`}
         >
-          {copied ? 'コピーしました!' : 'コピー'}
+          {copied ? '✓ コピー完了' : 'コピー'}
         </button>
       </div>
       <div
-        className="result-content p-4 text-sm text-gray-800 leading-relaxed"
+        className="result-content p-5 text-sm text-gray-700 leading-relaxed"
         dangerouslySetInnerHTML={{ __html: markdownToHtml(result) }}
       />
     </div>

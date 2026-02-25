@@ -1,29 +1,48 @@
 /* Markdown output styling */
 .result-content h2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: #1e3a8a;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #dbeafe;
+}
+.result-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.375rem;
+  color: #1e40af;
 }
 .result-content table {
   width: 100%;
   border-collapse: collapse;
   margin: 0.75rem 0;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 .result-content th,
 .result-content td {
-  border: 1px solid #d1d5db;
-  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 0.75rem;
   text-align: left;
 }
 .result-content th {
-  background-color: #f3f4f6;
+  background: linear-gradient(to right, #eff6ff, #eef2ff);
   font-weight: 600;
+  color: #3730a3;
+  font-size: 0.8rem;
+}
+.result-content tr:hover td {
+  background-color: #f8faff;
 }
 .result-content p {
   margin: 0.5rem 0;
-  line-height: 1.7;
+  line-height: 1.8;
+  color: #374151;
 }
 .result-content ul,
 .result-content ol {
@@ -31,5 +50,11 @@
   padding-left: 1.5rem;
 }
 .result-content li {
-  margin: 0.25rem 0;
+  margin: 0.3rem 0;
+  line-height: 1.7;
+  color: #374151;
+}
+.result-content strong {
+  color: #1e40af;
+  font-weight: 600;
 }
